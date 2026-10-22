@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17131d">
+    <meta name="description" content="Discover exceptional vehicles and suggest the next car for Apex Cars to add to its inventory.">
+    <title>Apex Cars | Exceptional Vehicles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <a class="brand" href="#home">Apex <span>Cars</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a class="nav-contact" href="#contact">Suggest a car</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section class="Home" id="home">
+            <div class="has">
+                <p class="hero-eyebrow">APEX CARS · EXCEPTIONAL BY DESIGN</p>
+                <h1>Find the car that moves you.</h1>
+                <p>Discover exceptional vehicles, selected for the way you want to drive.</p>
+                <a href="#inventory">Explore our inventory <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="mg">
+                <img src="Cover.png" alt="Black electric pickup truck" fetchpriority="high">
+            </div>
+        </section>
+        <section class="Inventory" id="inventory">
+            <div class="inventory-heading">
+                <p class="inventory-label">A BETTER WAY TO FIND YOUR NEXT CAR</p>
+                <h2>Our inventory</h2>
+                <p>Browse available vehicles from Apex Cars.</p>
+            </div>
+            <div class="vehicle-grid" id="vehicle-grid">
+                <div class="inventory-empty">
+                    <span class="empty-mark" aria-hidden="true">✦</span>
+                    <h3>New arrivals are on the way</h3>
+                    <p>Our available vehicles will appear here soon. Have a car in mind? Send us a suggestion.</p>
+                    <a href="#contact">Suggest a car</a>
+                </div>
+            </div>
+            <template id="vehicle-card-template">
+                <article class="vehicle-card">
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name"></h3>
+                        <p class="vehicle-price"></p>
+                    </div>
+                </article>
+            </template>
+        </section>
+        <section class="About" id="about">
+            <div class="abt">
+                <p class="about-label">ABOUT APEX CARS</p>
+                <h2>Driven by a passion for exceptional cars.</h2>
+                <p class="about-description">Apex Cars began with one simple idea and one clear goal: to bring our customers the best and newest cars.</p>
+                <p class="about-owner">Founded by <strong>Blossom Ejikemeuwa</strong></p>
+            </div>
+            <div class="abr">
+                <img src="About.png" alt="Luxury white car at night" loading="lazy">
+            </div>
+        </section>
+        <section class="Contact" id="contact">
+            <div class="contact-intro">
+                <p class="contact-label">YOUR NEXT FAVORITE CAR</p>
+                <h2>What should we add to our inventory?</h2>
+                <p>Suggest a vehicle you would love to see at Apex Cars. Your idea can help shape our future selection.</p>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <div class="form-field">
+                    <label for="contact-name">Your name</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required>
+                </div>
+                <div class="form-field">
+                    <label for="contact-email">Email address</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="jane@example.com" required>
+                </div>
+                <div class="form-field">
+                    <label for="car-suggestion">Which car should we add?</label>
+                    <input id="car-suggestion" name="carSuggestion" type="text" placeholder="e.g. 2024 Mercedes-Benz G-Class" required>
+                </div>
+                <div class="form-field">
+                    <label for="contact-message">Why this car? <span>(optional)</span></label>
+                    <textarea id="contact-message" name="message" rows="4" placeholder="Share anything else you would like us to know"></textarea>
+                </div>
+                <button type="submit">Send your suggestion <span aria-hidden="true">→</span></button>
+                <p class="contact-note" id="contact-note" aria-live="polite">This form is a preview and is not connected to a submission service yet.</p>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <a class="footer-brand" href="#home">Apex <span>Cars</span></a>
+        <p>Exceptional cars. Personal service.</p>
+        <a class="back-to-top" href="#home">Back to top ↑</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
